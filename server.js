@@ -3,7 +3,7 @@ const express = require('express');
 const path = require('path');
 const app = express();
 app.use(express.json());
-app.use(express.static("."));
+app.use(express.static("/"));
 
 app.get('/', function(req, res)  {
     //setting middleware
