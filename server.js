@@ -3,11 +3,11 @@ const express = require('express');
 const path = require('path');
 const app = express();
 app.use(express.json());
-app.use(express.static("dist"));
+app.use(express.static("."));
 
 app.get('/', function(req, res)  {
     //setting middleware
-res.sendFile(path.join('dist/index.html'));
+res.sendFile(path.join('index.html'));
 });
 
 const server = http.createServer(app);
